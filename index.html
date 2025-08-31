@@ -4,18 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; display: grid; place-content: center; height: 100vh; text-align: center; background-color: #f0f2f5; margin: 0; }
-        .container { padding: 2rem; background-color: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        h1 { font-size: 2.5rem; color: #333; }
-        p { color: #666; }
+        :root {
+            --bg-color: #f8f9fa;
+            --card-bg-color: #ffffff;
+            --text-primary-color: #212529;
+            --text-secondary-color: #6c757d;
+            --divider-color: #dee2e6;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: var(--bg-color);
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+
+        .card {
+            background-color: var(--card-bg-color);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            padding: 3rem 2rem;
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+            border: 1px solid var(--divider-color);
+        }
+
+        .illustration {
+            width: 150px;
+            height: auto;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-primary-color);
+            margin: 0 0 2rem 0;
+        }
+
+        h1 .domain-name {
+            font-weight: 700;
+        }
+
+        .divider {
+            border: 0;
+            height: 1px;
+            background-color: var(--divider-color);
+            margin: 2rem 0;
+        }
+
+        .footer-text {
+            font-size: 0.875rem;
+            color: var(--text-secondary-color);
+            margin: 0;
+        }
+
+        .footer-text .domain-name {
+            font-weight: 500;
+            color: var(--text-primary-color);
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                padding: 2rem 1.5rem;
+            }
+            h1 {
+                font-size: 1.25rem;
+            }
+            .illustration {
+                width: 120px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Coming Soon</h1>
-        <p>Our new website is under construction and will be live shortly.</p>
-        <p><em>Powered by Your Web Agency</em></p>
+
+    <div class="card">
+        <!-- SVG Illustration -->
+        <svg class="illustration" viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" fill-rule="evenodd">
+                <path d="M78.6,124.5 C78.6,124.5 90.5,120.3 90.5,108.5 C90.5,96.7 78.6,92.5 78.6,92.5" stroke="#364960" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M83.4,109.8 C83.4,109.8 82.2,100.2 88,100.2 C93.8,100.2 97.8,111 89.2,112.6 C80.6,114.2 82.2,123.8 88,123.8 C93.8,123.8 84.6,111.4 84.6,111.4" stroke="#364960" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M125.2,40.1 C133.2,28.7 131,16.7 131.6,5.1" stroke="#8251e3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M110.8,42.5 C116.2,30.5 119.4,17.1 115.8,5.1" stroke="#8251e3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M141.2,42.5 C152,32.7 149,17.1 147.4,5.1" stroke="#8251e3" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M149,70.9 C149,70.9 133.4,79.5 125.2,85.1 L89.4,109.5 L89.4,49.1 L125.2,24.7 C133.4,19.1 149,27.7 149,27.7 L177,49.1 L149,70.9 Z" fill="#67d5e4"/>
+                <path d="M125.2,85.1 L89.4,109.5 L89.4,49.1 L125.2,24.7" stroke="#364960" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M149,70.9 L125.2,85.1 M149,27.7 L125.2,24.7" stroke="#364960" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M177,49.1 L149,27.7 L149,70.9 L177,49.1 Z" stroke="#364960" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle fill="#F54479" cx="44" cy="27" r="6"/>
+                <circle fill="#F54479" cx="23" cy="48" r="4"/>
+                <circle fill="#F54479" cx="62" cy="50" r="3"/>
+                <circle fill="#8251e3" cx="58" cy="11" r="3"/>
+                <circle fill="#8251e3" cx="33" cy="10" r="4"/>
+                <circle fill="#8251e3" cx="15" cy="25" r="3"/>
+            </g>
+        </svg>
+
+        <h1>
+            <span class="domain-name">...</span> is coming soon
+        </h1>
+
+        <hr class="divider">
+
+        <p class="footer-text">
+            This domain is managed at <span class="domain-name">...</span>
+        </p>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get the current hostname (e.g., "emaarsalecenter.com")
+            const currentDomain = window.location.hostname;
+            
+            // Find all elements with the class 'domain-name'
+            const domainSpans = document.querySelectorAll('.domain-name');
+            
+            // Update the text content of each found element
+            domainSpans.forEach(span => {
+                span.textContent = currentDomain;
+            });
+        });
+    </script>
+
 </body>
 </html>
