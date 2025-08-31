@@ -39,7 +39,8 @@
         }
 
         .illustration {
-            width: 150px;
+            max-width: 350px;
+            width: 100%;
             height: auto;
             margin-bottom: 2rem;
         }
@@ -64,13 +65,18 @@
 
         .footer-text {
             font-size: 0.875rem;
-            color: black;
+            color: var(--text-secondary-color);
             margin: 0;
         }
 
         .footer-text .domain-name {
             font-weight: 500;
             color: var(--text-primary-color);
+        }
+
+        .logo {
+            max-width: 150px;
+            padding-top: 10px;
         }
 
         @media (max-width: 600px) {
@@ -81,7 +87,7 @@
                 font-size: 1.25rem;
             }
             .illustration {
-                width: 120px;
+                max-width: 280px;
             }
         }
     </style>
@@ -90,7 +96,7 @@
 
     <div class="card">
         <!-- SVG Illustration -->
-       <img src="landing.png"  width="350" />
+       <img src="landing.png" class="illustration" alt="Coming Soon Illustration" />
 
         <h1>
             <span class="domain-name">...</span> is coming soon
@@ -100,7 +106,7 @@
 
         <p class="footer-text">
             This domain is managed at<br>
-            <img src="https://overbeta-web.s3.ap-south-1.amazonaws.com/wp-content/uploads/2024/10/03162447/logo.png" width="150" style="padding-top:10px;" /> 
+            <img src="https://overbeta-web.s3.ap-south-1.amazonaws.com/wp-content/uploads/2024/10/03162447/logo.png" class="logo" alt="Management Logo" /> 
         </p>
     </div>
 
